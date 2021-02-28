@@ -32,13 +32,16 @@ void clicker()
 		}
 		else if (GetAsyncKeyState('C')) //toggle off
 		{
-			exit(-1);
+			system("Color 0c");
+			cout << "AFK Miner: OFF\n\n";
+			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+			Sleep(500);
 			
 		}
 		if (click == true) 
 		{
 			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-			Sleep(1000);
+			click = false;
 		}
 		
 	}
