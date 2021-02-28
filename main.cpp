@@ -12,7 +12,7 @@ cout << "|     ||  |_  |    \     |  \_/  | |  | |  |  ||    _]|    /     \n";
 cout << "|  _  ||   _] |     |    |   |   | |  | |  |  ||   [_ |    \    \n";
 cout << "|  |  ||  |   |  .  |    |   |   | |  | |  |  ||     ||  .  \    \n";
 cout << "|__|__||__|   |__|\_|    |___|___||____||__|__||_____||__|\_|    \n\n";                                                      
-	cout << "Auto Miner by Jordan/CLOUT3D\n\n";
+	cout << "Auto Miner by Jordan/CLOUT3D\n\n\n";
 	cout << "Press 'X' to enable and 'C' to disable.\n\n";
 }
 
@@ -25,18 +25,20 @@ void clicker()
 		//Left Click
 		if (GetAsyncKeyState('X')) //toggle on
 		{
+			system("Color 0a");
+			cout << "AFK Miner: ON\n\n";
 			click = true; 
+			Sleep(500);
 		}
 		else if (GetAsyncKeyState('C')) //toggle off
 		{
-			click = false;
-			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+			exit(-1);
 			
 		}
 		if (click == true) 
 		{
 			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-			Sleep(1000); //Adjust Speed | (Warning settings this value below 1 WILL cause come crashes. Try at your own risk. THE LOWER THE VALUE THE FASTER)
+			Sleep(1000);
 		}
 		
 	}
